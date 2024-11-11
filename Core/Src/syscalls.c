@@ -31,16 +31,16 @@
 #include <sys/times.h>
 
 // Debug Exception & Monitor Control Register Base Address
-#define DEMCR                 *((volatile uint32_t*) 0xE000EDFCU)
+#define DEMCR                 *((volatile uint32_t*) 0xE000EDFC)
 
 //ITM Register Address
-#define ITM_TRACE_EN          *((volatile uint32_t*) 0xE00000E00)
-#define ITM_STIMULUS_PORT0    *((volatile uint32_t*) 0xE00000000)
+#define ITM_TRACE_EN          *((volatile uint32_t*) 0xE00000E0)
+#define ITM_STIMULUS_PORT0    *((volatile uint32_t*) 0xE0000000)
 
 /* Debug function for printf used in __write() */
 void ITM_SendChar(uint8_t ch)
 {
-	// Enable the use of TRACE (TRCENA bit set to 1
+	// Enable the use of TRACE (TRCENA bit set to 1)
 	DEMCR |= (1<<24);
 
 	// Enable Stimulus Port0

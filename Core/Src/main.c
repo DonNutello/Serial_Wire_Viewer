@@ -103,7 +103,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  printf("ZAWARDU * : %d\r\n:", count);
+	  printf("ZAWARDO * %d\r\n", count);
 
 	  count++;
 
